@@ -1,0 +1,53 @@
+import pygame
+
+# size of game window
+WINDOW_WIDTH = 750
+WINDOW_HEIGHT = 750
+
+# Colors
+WHITE = (255, 255, 255)
+BLACK = (0, 0, 0)
+GRAY = (200, 200, 200)
+GREEN = (0, 255, 0)
+
+# floor setting 
+NUM_FLOORS = 15
+FLOOR_WIDTH = 100
+if WINDOW_HEIGHT / 50 > NUM_FLOORS:
+    FLOOR_HEIGHT = 50
+else:
+    FLOOR_HEIGHT = WINDOW_HEIGHT / NUM_FLOORS
+LOCATION_X_FLOOR = 50
+
+FLOOR_IMG = "media/floor.png"
+LINE_HEIGHT = 7
+
+# elevator setting 
+SPEED_ELEVATOR = 0.5 
+ELEVATOR_STOP_TIME = 2
+NUM_ELEVATOR = 3
+ELEV_HEIGHT = 50
+if WINDOW_HEIGHT / 50 < NUM_FLOORS:
+    ELEV_HEIGHT = WINDOW_HEIGHT / NUM_FLOORS
+if WINDOW_WIDTH / 50 > NUM_ELEVATOR:
+    ELEV_WIDTH = 50
+else:
+    ELEV_WIDTH = (WINDOW_WIDTH - FLOOR_WIDTH) / NUM_ELEVATOR
+ELEV_LOCATION_Y = WINDOW_WIDTH - FLOOR_HEIGHT
+ADD_TO_LOCAYION_X = 50
+IMG_ELEVATOR = 'media/elv.png'
+DING = 'media/ding.mp3'
+# button setting
+ADD_TO_Y = 15
+WIDTH_BUTTON = 25
+HEIGHT_BUTTON = FLOOR_HEIGHT - 20
+pygame.font.init()
+FONT_BUTTON = pygame.font.Font(None, 30)
+
+# timer setting
+TIMER_X = 5
+ADD_Y = 20
+RECT_WIDTH_FOR_TIMER = 50
+RECT_HEIGHT_FOR_TIMER = 50
+FONT_TIME = pygame.font.Font(None, 20)
+
